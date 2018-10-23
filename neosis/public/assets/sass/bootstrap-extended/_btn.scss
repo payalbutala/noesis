@@ -1,0 +1,56 @@
+    .btn {
+        @include transition(all 0.3s linear);
+        text-decoration: none;
+        color: $clr-primary;
+        font-weight: 800;
+        font-size: 12px;
+        background: transparent;
+        &:focus,
+        &.focus,
+        &:active,
+        &:active:focus,
+        &:active.focus,
+        &.active:focus,
+        &.active.focus {
+            outline: 0;
+            box-shadow: none;
+            color: $clr-primary;
+        }
+        .icon {
+            font-size: 130%;
+            line-height: 0;
+        }
+        .icon-right-open-mini {
+            position: relative;
+            left: 0;
+            @include transition(all 0.3s linear);
+            top: -2px;
+        }
+        &:hover {
+            @include transition(all 0.3s linear);
+            color: $clr-base;
+            .icon-right-open-mini {
+                // left: 5px;
+                @include transition(all 0.3s linear);
+            }
+        }
+        &.btn-link {
+            color: $clr-base;
+            text-decoration: none;
+            font-weight: $font-medium;
+            .icon {
+                margin-right: 6px;
+            }
+            &:hover {
+                color: $clr-primary;
+            }
+        }
+        &.btn-black,
+        &.btn-black:hover {
+            color: $clr-root;
+            background: $clr-base;
+            border-radius: 0;
+            font-weight: $font-medium;
+            text-transform: uppercase;
+        }
+    }

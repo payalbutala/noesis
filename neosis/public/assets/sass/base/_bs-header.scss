@@ -1,0 +1,205 @@
+.bs-header {
+    .main-header {
+        z-index: 8;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+    .navbar {
+        padding-top: 0;
+        background: $clr-root;
+        border: 0;
+        transition: all .6s linear;
+        border-radius: 0;
+        .navbar-brand {
+            width: 142px;
+            position: relative;
+            @include transition(all 0.3s linear);
+            img {
+                display: block;
+                width: 100%;
+            }
+            &:after {
+                content: none;
+            }
+        }
+    }
+    .navbar-nav {
+        >li {
+            >a {
+                color: $clr-base;
+                text-transform: uppercase;
+                font-weight: $font-bold;
+                @include transition(all 0.3s linear);
+                letter-spacing: .6px;
+                padding: 28px;
+                position: relative;
+                font-size: 12px;
+                &::after {
+                    content: "";
+                    width: 0;
+                    height: 1px;
+                    background: rgba(100, 100, 200, 0);
+                    bottom: 20px;
+                    position: absolute;
+                    @include transition(all 0.3s ease);
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                }
+                &:hover {
+                    color: $clr-primary;
+                    @include transition(all 0.3s linear);
+                    &::after {
+                        width: 50px;
+                        background: $clr-primary;
+                    }
+                }
+            }
+            &:focus {
+                background: transparent;
+            }
+            &.active,
+            {
+                >a,
+                >a:hover,
+                >a:focus {
+                    color: $clr-primary;
+                    background: transparent;
+                    @include transition(all 0.3s linear);
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        border-bottom: 1px solid $clr-primary;
+                        height: 1px;
+                        width: 40px;
+                    }
+                }
+            }
+            &.no-hover {
+                a {
+                    &:after {
+                        content: none;
+                    }
+                }
+            }
+            &.link-hover {
+                >a,
+                >a:focus {
+                    color: $clr-primary;
+                }
+            }
+        }
+    }
+    .navbar-brand {
+        padding: 28px 15px;
+    }
+    .main-nav {
+        position: relative;
+        margin-bottom: 0;
+        padding: 0 0 0 0;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+        -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .bs-header {
+        .navbar {
+            padding: 0;
+            .navbar-brand {
+                &:after {
+                    content: none;
+                }
+            }
+        }
+        .main-nav {
+            &.sticky {
+                padding: 0;
+            }
+        }
+        .main-header {
+            z-index: 13;
+        }
+    }
+    .bs-header {
+        position: relative;
+        .navbar {
+            padding-top: 45px;
+            border: 0;
+            border-radius: 0;
+            .navbar-brand {
+                width: 120px;
+                position: relative;
+                @include transition(all 0.3s linear);
+                margin: 0 auto;
+                float: none;
+                display: block;
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+        .navbar-nav {
+            >li {
+                >a {
+                    color: $clr-base;
+                    text-transform: uppercase;
+                    font-weight: $font-bold;
+                    @include transition(all 0.3s linear);
+                    letter-spacing: .6px;
+                    padding: 0 28px 15px;
+                    position: relative;
+                    font-size: 14px;
+                    &::after {
+                        content: none;
+                        width: 0;
+                        height: 1px;
+                        background: rgba(100, 100, 200, 0);
+                        bottom: 0;
+                        left: 0;
+                        position: absolute;
+                        @include transition(all 0.3s ease);
+                    }
+                    &:hover {
+                        color: $clr-primary;
+                        @include transition(all 0.3s linear);
+                        &::after {
+                            left: 28px;
+                            width: 50px;
+                            background: $clr-primary;
+                        }
+                    }
+                }
+                &.active,
+                {
+                    >a,
+                    >a:hover {
+                        color: $clr-primary;
+                        background: transparent;
+                        @include transition(all 0.3s linear);
+                        &::after {
+                            content: none;
+                            position: absolute;
+                            left: 28px;
+                            border-bottom: 1px solid $clr-primary;
+                            height: 1px;
+                            width: 40px;
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .navbar-brand {
+            padding: 17px 15px;
+        }
+        .main-nav {
+            position: relative;
+            margin-bottom: 0;
+            padding: 0;
+        }
+    }
+}

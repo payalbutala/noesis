@@ -1,0 +1,174 @@
+.bs-form {
+    .form-label {
+        text-transform: capitalize;
+        font-size: 16px;
+        color: #aaa;
+        display: block;
+        font-weight: $font-medium;
+        margin-bottom: 10px;
+    }
+    .form-control {
+        border: 0;
+        border-bottom: 1px solid #d7d7d7;
+        box-shadow: none;
+        @include border-radius(0);
+        @include input-placeholder {
+            font-size: 12px;
+        }
+    }
+    &.typ-label-input {
+        .form-group {
+            margin-bottom: 20px;
+            .form-label {
+                margin-bottom: 2px;
+                text-transform: initial;
+                font-size: 15px;
+                line-height: 18px;
+                color: #a0a0a0;
+                font-weight: 400;
+                &.label-select {
+                    position: relative;
+                    top: 5px;
+                }
+            }
+            &.typ-minHt {
+                padding-top: 20px;
+            }
+            .form-control {
+                // min-height: 42px;
+                height: 40px;
+                padding: 10px 0;
+                position: relative;
+                z-index: 1;
+                background: transparent;
+                border-bottom-color: #b4b4b6;
+                font-weight: $font-bold;
+                &.typ-textarea {
+                    height: auto;
+                }
+                &:placeholder {
+                    color: transparent;
+                }
+            }
+            &.last {
+                margin: 0;
+            }
+            &.typ-anim {
+                position: relative;
+                &.last {
+                    margin: 0;
+                }
+                .form-label {
+                    position: absolute;
+                    // top: 10px;
+                    bottom: 6px;
+                    left: 0;
+                    transition: all 0.3s ease;
+                    font-size: 15px;
+                    line-height: 18px;
+                    color: $clr-secondary;
+                    font-weight: $font-regular;
+                    z-index: 0;
+                }
+                .fill-line {
+                    height: 1px;
+                    left: 0;
+                    bottom: 0;
+                    width: 0;
+                    right: 0;
+                    position: absolute;
+                    transition: all 0.3s ease;
+                    background: $clr-primary;
+                    z-index: 2;
+                }
+                &.focusIn {
+                    .form-label {
+                        bottom: 35px;
+                    }
+                }
+                .form-control {
+                    height: 40px;
+                    padding: 10px 0;
+                    position: relative;
+                    z-index: 1;
+                    background: transparent;
+                    border-bottom-color: #b4b4b6;
+                    font-weight: $font-bold;
+                    &:focus {
+                        +.form-label {
+                            bottom: 35px;
+                            font-weight: $font-regular;
+                            +.fill-line {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                &.lbl-anim {
+                    .form-label {
+                        bottom: 35px;
+                    }
+                }
+                .result {
+                    position: absolute;
+                    color: red;
+                    padding: 8px 0;
+                }
+            }
+        }
+        .output {
+            height: 200px;
+            overflow-y: auto;
+            word-break: break-all;
+            padding-right: 10px;
+            color: #444;
+            line-height: 20px;
+            font-weight: 500;
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .cm-center-wrapper {
+            margin-top: 50px;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .bs-form {
+        &.typ-label-input {
+            .form-group {
+                margin-bottom: 20px;
+                padding-top: 12px;
+                .form-label {
+                    font-size: 12px;
+                    line-height: 14px;
+                }
+                &.typ-anim {
+                    .form-control {
+                        height: 30px;
+                        padding: 5px 0;
+                        &:focus {
+                            &+.form-label {
+                                bottom: 28px;
+                                font-size: 12px;
+                                line-height: 14px;
+                            }
+                        }
+                    }
+                    .form-label {
+                        bottom: 8px;
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+                    &.lbl-anim {
+                        .form-label {
+                            bottom: 28px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

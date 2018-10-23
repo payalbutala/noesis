@@ -1,0 +1,26 @@
+.lyt-section {
+    padding: 90px 0;
+    .bs-heading-desc {
+        margin-bottom: 80px;
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .lyt-section {
+        padding: 60px 0;
+        .bs-heading-desc {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        &.typ-tabs {
+            padding: 30px 0;
+            .nested-tablist {
+                .nested-tab-title {
+                    font-size: 18px;
+                    line-height: 20px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

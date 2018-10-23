@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Noesis - Assignment</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Demo project with jQuery">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,300i,400,400i,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+</head>
+
+<body>
+    <div class="bs-header">
+        <div class="main-header">
+            <header>
+                <nav class="navbar navbar-default main-nav">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">
+                                <img src="assets/images/logo-svg.svg" alt="logo" />
+                            </a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right full-navbar js-menu-click">
+                                <li>
+                                    <a href="#">Prime Number</a>
+                                </li>
+                                <li>
+                                    <a href="#">Palindrome</a>
+                                </li>
+                                <li>
+                                    <a href="#">Fibonacci</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>
+    </div>
+    <h1 class="cm-not-in-page">Questionnaire</h1>
+    <main>
+        <section>
+            <div class="lyt-section typ-tabs">
+                <div class="bs-tabs">
+                    <!-- Nav tabs -->
+                    <div class="nav nav-tabs typ-center" role="tablist">
+                        <div class="">
+                            <ul class="container">
+                                <li class=" active"><a href="#prime" aria-controls="prime" role="tab" data-toggle="tab">Prime</a></li>
+                                <li class=""><a href="#palindrome" aria-controls="palindrome" role="tab" data-toggle="tab">Palindrome</a></li>
+                                <li class=" "><a href="#fibonacci" aria-controls="Product selector" role="tab" data-toggle="tab">Fibonacci</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="prime">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2">
+                                        <div class="bs-heading-desc clearfix typ-sm typ-vertical typ-center">
+                                            <h2 class="heading fadeInUp wow  animated" data-in="fadeInUp" data-wow-delay="0.4s">
+                                                <span class="sub-txt cm-line-break">
+                                                    Check
+                                                </span>
+                                                <span class="txt cm-line-break">
+                                                    Prime Number
+                                                </span>
+                                            </h2>
+                                        </div>
+                                        <div class="bs-form typ-label-input">
+                                            <form name="form_primeNum" id="form_primeNum">
+                                                <div class="col-md-6 col-md-offset-3 col-xs-12 col-md-offset-0">
+                                                    <ul class="clearfix">
+                                                        <li class="col-md-12 col-xs-12">
+                                                            <div class="form-group typ-anim">
+                                                                <input class="form-control" required="">
+                                                                <label class="form-label" for="">Enter Number</label>
+                                                                <span class="fill-line"></span>
+                                                                <span class="result"></span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="cm-center-wrapper">
+                                                        <input type="submit" class="btnPrime btn btn-black" value="Check">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="palindrome">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2">
+                                        <div class="bs-heading-desc clearfix typ-sm typ-vertical typ-center">
+                                            <h2 class="heading">
+                                                <span class="sub-txt cm-line-break">
+                                                    Check
+                                                </span>
+                                                <span class="txt cm-line-break">
+                                                    Palindrome
+                                                </span>
+                                            </h2>
+                                        </div>
+                                        <div class="bs-form typ-label-input">
+                                            <form name="form_palindrome" id="form_palindrome">
+                                                <div class="col-md-6 col-md-offset-3 col-xs-12 col-md-offset-0">
+                                                    <ul class="clearfix">
+                                                        <li class="col-md-12 col-xs-12">
+                                                            <div class="form-group typ-anim">
+                                                                <input class="form-control" required="">
+                                                                <label class="form-label" for="">Enter String</label>
+                                                                <span class="fill-line"></span>
+                                                                <span class="result"></span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="cm-center-wrapper">
+                                                        <input type="submit" class="btnPd btn btn-black" value="Check">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="fibonacci">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2">
+                                        <div class="bs-heading-desc clearfix typ-sm typ-vertical typ-center">
+                                            <h2 class="heading">
+                                                <span class="sub-txt cm-line-break">
+                                                    Check
+                                                </span>
+                                                <span class="txt cm-line-break">
+                                                    Fibonacci Series
+                                                </span>
+                                            </h2>
+                                        </div>
+                                        <div class="bs-form typ-label-input">
+                                            <form name="form_fibonacci" id="form_fibonacci">
+                                                <div class="col-md-6 col-md-offset-3 col-xs-12 col-md-offset-0">
+                                                    <ul class="clearfix">
+                                                        <li class="col-md-12 col-xs-12">
+                                                            <div class="form-group typ-anim">
+                                                                <input class="form-control" required="">
+                                                                <label class="form-label" for="">Enter Number</label>
+                                                                <span class="fill-line"></span>
+                                                                <span class="result"></span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="cm-center-wrapper">
+                                                        <input type="submit" class="btnfb btn btn-black" value="Check">
+                                                    </div>
+
+                                                    <span class="output"></span>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="text/javascript" src="assets/js/vendor.js"></script>
+    <script type="text/javascript" src="assets/js/custom.js"></script>
+
+</body>
+
+</html>

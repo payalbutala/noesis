@@ -1,0 +1,20 @@
+//lyt-form
+.lyt-form {
+    .bs-heading-desc {
+        margin-bottom: 70px;
+        &.typ-sm {
+            .txt {
+                font-size: 26px;
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $mobile-breakpoint) {
+    .lyt-form {
+        .bs-heading-desc {
+            margin-bottom: 30px;
+        }
+    }
+}

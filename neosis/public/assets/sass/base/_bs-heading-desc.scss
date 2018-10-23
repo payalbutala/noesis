@@ -1,0 +1,111 @@
+.bs-heading-desc {
+    @-webkit-keyframes fadeInUp {
+        0% {
+            background: red;
+            opacity: 0;
+            -webkit-transform: translate3d(0, 20px, 0);
+            transform: translate3d(0, 20px, 0);
+        }
+        100% {
+            background: blue;
+            opacity: 1;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+    }
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            -webkit-transform: translate3d(0, 20px, 0);
+            transform: translate3d(0, 20px, 0);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+    }
+    .fadeInUp {
+        -webkit-animation-name: fadeInUp;
+        animation-name: fadeInUp;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
+    .heading {
+        .sub-txt {
+            font-size: 28px;
+            color: $clr-primary;
+            line-height: 28px;
+            font-weight: $font-light;
+            i {
+                font-style: italic;
+            }
+        }
+        .txt {
+            font-size: 120px;
+            line-height: 115px;
+            font-weight: 800;
+        }
+        float: left;
+    }
+    &.typ-sm {
+        .heading {
+            .txt {
+                font-size: 60px;
+                line-height: 60px;
+                &.typ-xs {
+                    font-size: 34px;
+                }
+            }
+        }
+    }
+    &.typ-vertical {
+        .heading {
+            float: none;
+        }
+        .btn-desc-parnet {
+            padding-left: 0;
+            padding-top: 20px;
+            .btn {
+                padding-left: 0;
+                &.btn-bg-red {
+                    padding-left: 12px;
+                }
+            }
+        }
+    }
+    &.typ-center {
+        text-align: center;
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .bs-heading-desc {
+        .heading {
+            float: none;
+            .sub-txt {
+                font-size: 20px;
+                line-height: 22px;
+                font-weight: $font-regular;
+                margin-bottom: 4px;
+            }
+            .txt {
+                font-size: 60px;
+                line-height: 60px;
+            }
+            .brand-image {
+                height: 40px;
+                margin-top: 5px;
+                background-position: left center;
+            }
+        }
+        &.typ-sm {
+            .heading {
+                .txt {
+                    font-size: 38px;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+}

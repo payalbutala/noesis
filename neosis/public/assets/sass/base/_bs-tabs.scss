@@ -1,0 +1,141 @@
+.bs-tabs {
+    .nav-tabs {
+        &.typ-center {
+            ul {
+                text-align: center;
+                li {
+                    display: inline-block;
+                    float: none;
+                }
+            }
+        }
+        li {
+            position: relative;
+            display: block;
+            float: left;
+            margin-bottom: -1px;
+            a {
+                padding: 10px 30px;
+                color: rgba($clr-base, .5);
+                margin-right: 2px;
+                border: 0;
+                font-size: 14px;
+                font-weight: $font-semibold;
+                @include transition(all 0.3s linear);
+                position: relative;
+                display: block;
+                padding: 10px 30px;
+                &::after {
+                    content: "";
+                    width: 0;
+                    height: 2px;
+                    background: rgba(100, 100, 200, 0);
+                    bottom: 0;
+                    position: absolute;
+                    @include transition(all 0.3s ease);
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                }
+                &:hover {
+                    border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
+                    background: transparent;
+                    border-radius: 0;
+                    border: 0;
+                    &:after {
+                        left: 0;
+                        width: 65px;
+                        background: $clr-primary;
+                        right: 0;
+                        margin: 0 auto;
+                    }
+                }
+                &:hover,
+                &.active {
+                    color: $clr-base;
+                    &:after,
+                    &:hover:after,
+                    &:focus:after {
+                        left: 0;
+                        width: 40px;
+                        height: 1px;
+                        background: $clr-primary;
+                        right: 0;
+                        margin: 0 auto;
+                    }
+                }
+            }
+            &.active {
+                a {
+                    color: $clr-base;
+                }
+                &>a:after,
+                &>a:hover:after,
+                &>a:focus:after {
+                    left: 0;
+                    width: 40px;
+                    height: 1px;
+                    background: #e32c23;
+                    right: 0;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .bs-tabs {
+        .nav-tabs {
+            &.typ-center {
+                .swiper-wrapper {
+                    margin: 0 auto;
+                    padding: 0;
+                    .swiper-slide {
+                        display: inline-block;
+                        float: none;
+                    }
+                }
+            }
+            li {
+                position: relative;
+                display: inline-block;
+                float: none;
+                margin-bottom: -1px;
+                a {
+                    padding: 10px 15px;
+                }
+            }
+            a {
+                color: rgba($clr-base, .5);
+                margin-right: 2px;
+                border: 0;
+                font-size: 12px;
+                font-weight: $font-semibold;
+                @include transition(all 0.3s linear);
+                &::after {
+                    content: "";
+                    width: 0;
+                    height: 2px;
+                    background: rgba(100, 100, 200, 0);
+                    bottom: 0;
+                    position: absolute;
+                    @include transition(all 0.3s ease);
+                }
+                &:hover {
+                    border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
+                    background: transparent;
+                    border-radius: 0;
+                    border: 0;
+                    &:after {
+                        left: 0;
+                        width: 65px;
+                        background: $clr-primary;
+                        right: 0;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}
